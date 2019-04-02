@@ -11,6 +11,12 @@ Here are a list of them: golang, rust, cscope (for C++), ctags (for rust), fzf
 chmod +x install.sh
 ./install.sh
 ```
+### Useful commands
 
+```bash
+1. jj or jk (equivalent to <ESC>, useful to MacBook touchbar)
+2. :Ag (fuzzy search code), :Files (search files), :Tags (search ctags -R . generated)
+3. (to be continue...)
+```
 
 
