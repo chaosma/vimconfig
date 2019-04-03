@@ -26,6 +26,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+execute pathogen#infect()
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
@@ -308,12 +310,6 @@ map <leader>s? z=
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-" Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<cr>
-
-" Quickly open a markdown buffer for scribble
-map <leader>x :e ~/buffer.md<cr>
-
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
@@ -322,8 +318,10 @@ map <leader>pp :setlocal paste!<cr>
 inoremap jj <esc>
 inoremap jk <esc>
 
-
-
+nnoremap <Space>] :vertical resize +7<CR>
+nnoremap <Space>[ :vertical resize -7<CR>
+nnoremap <leader>q  <C-w>q<CR>
+nnoremap <leader>x :bw<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
@@ -389,10 +387,7 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " =>  config for Plugins 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <Space>] :vertical resize +7<CR>
-nnoremap <Space>[ :vertical resize -7<CR>
 
-execute pathogen#infect()
 
 """""""""""""""""""""""""""""""
 " [plugin] netrw
@@ -400,7 +395,7 @@ execute pathogen#infect()
 let g:netrw_liststyle = 4
 let g:netrw_winsize = 20
 let g:netrw_banner = 0
-
+nnoremap <leader>v :Vexplore<CR>
 
 
 """""""""""""""""""""""""""""""
@@ -408,21 +403,21 @@ let g:netrw_banner = 0
 """""""""""""""""""""""""""""""
 nnoremap <leader>l :call ToggleLocationList()<CR>
 " s: Find this C symbol
-nmap <leader>fs :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>cs :cs find s <C-R>=expand("<cword>")<CR><CR>
 " g: Find this definition
-nmap <leader>fd :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>cd :cs find g <C-R>=expand("<cword>")<CR><CR>
 " d: Find functions called by this function
-nmap <leader>fr :cs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>cr :cs find d <C-R>=expand("<cword>")<CR><CR>
 " c: Find functions calling this function
-nmap <leader>fl :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>cl :cs find c <C-R>=expand("<cword>")<CR><CR>
 " e: Find this egrep pattern
-nmap <leader>fe :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>ce :cs find e <C-R>=expand("<cword>")<CR><CR>
 
 """""""""""""""""""""""""""""""
 " [plugin] taglist
 """""""""""""""""""""""""""""""
 filetype on
-nnoremap <leader>ft :TlistToggle<CR>
+nnoremap <leader>tt :TlistToggle<CR>
 
 
 " change search highlight color
@@ -529,4 +524,7 @@ let g:fzf_tags_command = 'ctags -R'
 
 " [Commands] --expect expression for directly executing the command
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
+
+nnoremap <Leader>a :Ag<CR>
+nnoremap <Leader>f :Files<CR>
 

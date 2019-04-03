@@ -14,9 +14,12 @@ chmod +x install.sh
 ### Useful commands
 
 ```bash
-1. jj or jk (equivalent to <ESC>, useful to MacBook touchbar)
-2. :Ag (fuzzy search code), :Files (search files), :Tags (search ctags -R . generated)
-3. (to be continue...)
+I use comma "," as <leader> key
+1. jj or jk (switch from insert mode as press <ESC>, useful to MacBook touchbar)
+2. <leader>a (:Ag, fuzzy search code), <leader>f (:Files search files), :Tags (search ctags -R . generated)
+3. <leader>v (:Vexplore open file system tree)
+4. <SPACE>[ (resize vertical window down), <SPACE>] (resize vertical window up), <leader>x (close current window), <leader>q (close current buffer)
+(to be continue...)
 ```
 
 
