@@ -21,6 +21,7 @@ git clone https://github.com/mkitt/tabline.vim
 git clone https://github.com/vim-scripts/taglist.vim
 git clone https://github.com/fatih/vim-go
 git clone https://github.com/tomlion/vim-solidity
+git clone https://github.com/prettier/vim-prettier
 
 # install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -39,6 +40,8 @@ if [ "$OS" == "Darwin" ]; then
     echo 'export FZF_DEFAULT_OPS="--extended"' >> ~/.zshrc
 fi
 
+# install prettier
+yarn global add prettier
 
 # [vim-go] vim open a file and run: 
 #  :GoInstallBinaries (install vim-go binaries)

@@ -310,9 +310,6 @@ map <leader>s? z=
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-" Toggle paste mode on and off
-map <leader>pp :setlocal paste!<cr>
-
 " Remap <ESC> for MacOS touchbar 
 " Make `jj` and `jk` throw you into normal mode
 inoremap jj <esc>
@@ -528,3 +525,10 @@ let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 nnoremap <Leader>a :Ag<CR>
 nnoremap <Leader>f :Files<CR>
 
+
+"""""""""""""""""""""""""""""""
+" [plugin] vim-prettier
+"""""""""""""""""""""""""""""""
+let g:prettier#exec_cmd_async = 1
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
