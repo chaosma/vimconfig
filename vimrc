@@ -321,6 +321,8 @@ nnoremap <Space>2 :resize+7<CR>
 nnoremap <Space>=  <C-w>=
 nnoremap <leader>q  <C-w>q<CR>
 nnoremap <leader>x :bw<CR>
+" work in normal mode
+map <leader>n :normal 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions

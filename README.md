@@ -24,5 +24,6 @@ I use comma "," as <leader> key. Here are my cheatsheet
 6. <SPACE>= (<C-w>= make window equal size), <C-w><C-w> (default for jump between windows)
 6. <leader>x (close current window), <leader>q (close current buffer)
 7. <leader>w (:w! save to file)
+8. <leader>n (:normal used in visual mode multiple lines)
 (to be continue...)
 ```
