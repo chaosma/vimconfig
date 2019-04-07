@@ -17,7 +17,7 @@ chmod +x install.sh
 I use comma "," as <leader> key. Here are my cheatsheet
 
 1. jj or jk (switch from insert mode as press <ESC>, useful to MacBook touchbar)
-2. <leader>a (:Ag, fuzzy search code), <leader>f (:Files search files), :Tags (search ctags -R . generated)
+2. <leader>a (:Ag, fuzzy search code, then use <c-j|k> move down|up), <leader>f (:Files search files), :Tags (search ctags -R . generated)
 3. <leader>v (:Vexplore open file system tree)
 4. <Space><Space> (vertical resize window up), <Backspace><Backspace> (vertical resize window down)
 5. <SPACE>1 (horizontal resize window down), <Space>2 (horizontal resize window up)
@@ -25,6 +25,6 @@ I use comma "," as <leader> key. Here are my cheatsheet
 6. <leader>x (close current window), <leader>q (close current buffer)
 7. <leader>w (:w! save to file)
 8. <leader>n (:normal used in visual mode multiple lines)
-9. <c-h|j|k|l|\> (navigate between vim and tmux windows)
+9. tmux+vim: <c-h|j|k|l|\> (navigate between vim and tmux windows), <m-h|j|k|l> (resize window size)
 (to be continue...)
 ```
