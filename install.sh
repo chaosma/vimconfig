@@ -4,6 +4,7 @@ OS=$(uname -s)
 
 # copy vimrc, suppose in vimconfig folder
 cp vimrc ~/.vimrc
+cp tmux.conf ~/.tmux.conf
 
 # install plugin manager: pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -20,8 +21,9 @@ git clone https://github.com/ervandew/supertab
 git clone https://github.com/mkitt/tabline.vim
 git clone https://github.com/vim-scripts/taglist.vim
 git clone https://github.com/fatih/vim-go
-git clone https://github.com/tomlion/vim-solidity
 git clone https://github.com/prettier/vim-prettier
+git clone https://github.com/tomlion/vim-solidity
+git clone https://github.com/christoomey/vim-tmux-navigator
 
 # install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf

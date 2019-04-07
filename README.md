@@ -25,5 +25,6 @@ I use comma "," as <leader> key. Here are my cheatsheet
 6. <leader>x (close current window), <leader>q (close current buffer)
 7. <leader>w (:w! save to file)
 8. <leader>n (:normal used in visual mode multiple lines)
+9. <c-h|j|k|l|\> (navigate between vim and tmux windows)
 (to be continue...)
 ```
