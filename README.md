@@ -17,7 +17,8 @@ chmod +x install.sh
 I use comma "," as <leader> key. Here are my cheatsheet
 
 1. jj or jk (switch from insert mode as press <ESC>, useful to MacBook touchbar)
-2. <leader>a (:Ag, fuzzy search code, then use <c-j|k> move down|up), <leader>f (:Files search files), :Tags (search ctags -R . generated)
+2. <leader>a (:Ag, fuzzy search mode)  <leader>f (:Files search files), :Tags (search ctags -R . generated)
+3. In fuzzy search mode: <c-j|k> (move down|up),<c-q> (quit mode), <c-p|n> (jump to prev|next search phrase)
 3. <leader>v (:Vexplore open file system tree)
 4. <Space><Space> (vertical resize window up), <Backspace><Backspace> (vertical resize window down)
 5. <SPACE>1 (horizontal resize window down), <Space>2 (horizontal resize window up)
