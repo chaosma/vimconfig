@@ -553,6 +553,7 @@ nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
 """""""""""""""""""""""""""""""
 " fix tmux ctrl-left/right not work issue (together with tmux config change)
+" for macOS user, make sure disable c-left/right in keyboard shortcuts
 """""""""""""""""""""""""""""""
 if &term =~ '^screen'
     " tmux will send xterm-style keys when its xterm-keys option is on
