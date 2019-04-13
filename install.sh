@@ -12,6 +12,7 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # install vim plugins
 cd ~/.vim/bundle
+git clone https://github.com/mileszs/ack.vim
 git clone https://github.com/vim-scripts/buftabs
 git clone https://github.com/vim-scripts/cscope.vim
 git clone https://github.com/junegunn/fzf.vim
@@ -37,6 +38,7 @@ fi
 
 if [ "$OS" == "Darwin" ]; then
     brew install ctags
+    brew install yarn
     echo 'alias ctags="`brew --prefix`/bin/ctags"' >> ~/.bash_profile
     echo 'export FZF_DEFAULT_OPS="--extended"' >> ~/.bash_profile
     echo 'export FZF_DEFAULT_OPS="--extended"' >> ~/.zshrc

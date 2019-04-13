@@ -209,10 +209,10 @@ map <silent> <leader><cr> :noh<cr>
 "map <C-l> <C-W>l
 
 " Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
+" map <leader>bd :Bclose<cr>:tabclose<cr>gT
 
 " Close all the buffers
-map <leader>ba :bufdo bd<cr>
+" map <leader>ba :bufdo bd<cr>
 
 map <leader>l :bnext<cr>
 map <leader>h :bprevious<cr>
@@ -469,11 +469,11 @@ let g:tablineclosebutton=1
 " [plugin] ack.vim + ag support
 " replaced with fzf.vim + Ag
 """""""""""""""""""""""""""""""
-"if executable('ag')
-"  let g:ackprg = 'ag --vimgrep'
-"endif
-"cnoreabbrev Ack Ack!
-"nnoremap <Leader>a :Ack!<Space>
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+cnoreabbrev Ack Ack!
+nnoremap <Leader>b :Ack!<Space>
 
 
 """""""""""""""""""""""""""""""
@@ -553,7 +553,6 @@ nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
 """""""""""""""""""""""""""""""
 " fix tmux ctrl-left/right not work issue (together with tmux config change)
-" for macOS user, make sure disable c-left/right in keyboard shortcuts
 """""""""""""""""""""""""""""""
 if &term =~ '^screen'
     " tmux will send xterm-style keys when its xterm-keys option is on
