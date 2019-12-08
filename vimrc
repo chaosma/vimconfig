@@ -451,9 +451,19 @@ noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
 """""""""""""""""""""""""""""""
-" [plugin] rust.vim Rust
+" [plugin] rust.vim and vim-racer Rust
 """""""""""""""""""""""""""""""
 let g:rustfmt_autosave = 1
+set hidden
+"" Attention: need modify this path in linux, this is for my MacOS
+let g:racer_cmd = "/Users/chao/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+let g:racer_insert_paren = 1
+
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 
 

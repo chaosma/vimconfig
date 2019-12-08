@@ -18,6 +18,7 @@ git clone https://github.com/vim-scripts/cscope.vim
 git clone https://github.com/junegunn/fzf.vim
 git clone https://github.com/vim-scripts/netrw.vim
 git clone https://github.com/rust-lang/rust.vim
+git clone https://github.com/racer-rust/vim-racer
 git clone https://github.com/ervandew/supertab
 git clone https://github.com/mkitt/tabline.vim
 git clone https://github.com/vim-scripts/taglist.vim
@@ -46,6 +47,10 @@ fi
 
 # install prettier
 yarn global add prettier
+
+# install racer (for vim)
+cargo +nightly install racer
+rustup component add rustfmt
 
 # [vim-go] vim open a file and run: 
 #  :GoInstallBinaries (install vim-go binaries)
