@@ -31,6 +31,9 @@ git clone https://github.com/christoomey/vim-tmux-navigator
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
+curl -o- -L https://yarnpkg.com/install.sh | bash
+echo 'export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"' >> ~/.zshrc
+
 if [ "$OS" == "Linux" ]; then
     sudo apt-get install cscope
     sudo apt-get install exuberant-ctags
@@ -39,9 +42,9 @@ fi
 
 if [ "$OS" == "Darwin" ]; then
     brew install ctags
-    brew install yarn
-    echo 'alias ctags="`brew --prefix`/bin/ctags"' >> ~/.bash_profile
-    echo 'export FZF_DEFAULT_OPS="--extended"' >> ~/.bash_profile
+    brew install cscope
+    echo 'alias ctags="`brew --prefix`/bin/ctags"' >> ~/.zshrc
+    echo 'export FZF_DEFAULT_OPS="--extended"' >> ~/.zshrc
     echo 'export FZF_DEFAULT_OPS="--extended"' >> ~/.zshrc
 fi
 
