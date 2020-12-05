@@ -6,6 +6,7 @@ OS=$(uname -s)
 cp vimrc ~/.vimrc
 cp tmux.conf ~/.tmux.conf
 
+
 # install plugin manager: pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -31,29 +32,39 @@ git clone https://github.com/christoomey/vim-tmux-navigator
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
-curl -o- -L https://yarnpkg.com/install.sh | bash
-echo 'export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"' >> ~/.zshrc
-
 if [ "$OS" == "Linux" ]; then
+    cp .zshrc_linux ~/.zshrc
     sudo apt-get install cscope
     sudo apt-get install exuberant-ctags
-    echo 'export FZF_DEFAULT_OPS="--extended"' >> ~/.bashrc
+    sudo apt-get install zsh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 if [ "$OS" == "Darwin" ]; then
-    brew install ctags
-    brew install cscope
-    echo 'alias ctags="`brew --prefix`/bin/ctags"' >> ~/.zshrc
-    echo 'export FZF_DEFAULT_OPS="--extended"' >> ~/.zshrc
-    echo 'export FZF_DEFAULT_OPS="--extended"' >> ~/.zshrc
+    cp .zshrc_mac ~/.zshrc
+    brew install zsh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
+
+# install nvm 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# install node
+nvm install node
+# install yarn
+curl -o- -L https://yarnpkg.com/install.sh | bash
+echo 'export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"' >> ~/.zshrc
+
+
 
 # install prettier
 yarn global add prettier
 
 # install racer (for vim)
-cargo +nightly install racer
-rustup component add rustfmt
+#cargo +nightly install racer
+#rustup component add rustfmt
 
 # [vim-go] vim open a file and run: 
 #  :GoInstallBinaries (install vim-go binaries)
