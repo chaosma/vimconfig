@@ -403,17 +403,17 @@ nnoremap <leader>v :Vexplore<CR>
 """""""""""""""""""""""""""""""
 " [plugin] cscope key mapping
 """""""""""""""""""""""""""""""
-nnoremap <leader>l :call ToggleLocationList()<CR>
-" s: Find this C symbol
-nmap <leader>cs :cs find s <C-R>=expand("<cword>")<CR><CR>
-" g: Find this definition
-nmap <leader>cd :cs find g <C-R>=expand("<cword>")<CR><CR>
-" d: Find functions called by this function
-nmap <leader>cr :cs find d <C-R>=expand("<cword>")<CR><CR>
-" c: Find functions calling this function
-nmap <leader>cl :cs find c <C-R>=expand("<cword>")<CR><CR>
-" e: Find this egrep pattern
-nmap <leader>ce :cs find e <C-R>=expand("<cword>")<CR><CR>
+" nnoremap <leader>l :call ToggleLocationList()<CR>
+"" s: Find this C symbol
+"nmap <leader>cs :cs find s <C-R>=expand("<cword>")<CR><CR>
+"" g: Find this definition
+"nmap <leader>cd :cs find g <C-R>=expand("<cword>")<CR><CR>
+"" d: Find functions called by this function
+"nmap <leader>cr :cs find d <C-R>=expand("<cword>")<CR><CR>
+"" c: Find functions calling this function
+"nmap <leader>cl :cs find c <C-R>=expand("<cword>")<CR><CR>
+"" e: Find this egrep pattern
+"nmap <leader>ce :cs find e <C-R>=expand("<cword>")<CR><CR>
 
 """""""""""""""""""""""""""""""
 " [plugin] taglist
@@ -432,8 +432,8 @@ autocmd BufNewFile,BufRead *.tpp set filetype=cpp
 """""""""""""""""""""""""""""""
 " [plugin] Golang
 """""""""""""""""""""""""""""""
-map <leader>gf :GoDef<cr>
-map <leader>gc :GoCallers<cr>
+" map <leader>gf :GoDef<cr>
+" map <leader>gc :GoCallers<cr>
 
 
 """""""""""""""""""""""""""""""

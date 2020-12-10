@@ -2,12 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 Cool="\342\236\244\040"
-PS1="\[\e[0;36m\]\u\[\e[m\]@\[\e[0;33m\]\w\[\e[m\]\n\[\e[0;36m\]$Cool\[\e[m\]"
+PS1="\[\e[0;36m\]\u\[\e[m\]@\[\e[0;33m\]\w\[\e[m\](\$(git branch 2>/dev/null | grep '^*' | colrm 1 2))\n\[\e[0;36m\]$Cool\[\e[m\]"
 
 HISTSIZE=10000
 HISTFILESIZE=10000
 
 alias ll="ls -lrth"
+alias ls='ls --color=auto'
 
 
 # python
@@ -27,7 +28,7 @@ export FZF_DEFAULT_OPS="--extended"
 # http://man7.org/linux/man-pages/man5/dir_colors.5.html for details
 # add this line for light terminal color scheme
 #LS_COLORS="di=0;47:ln=35;47:so=32;47:pi=33;47:ex=31;47:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:"
-alias ls='ls -G'
+#alias ls='ls -G'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source ~/deeper_bashrc
