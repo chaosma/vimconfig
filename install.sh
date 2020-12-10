@@ -18,11 +18,10 @@ git clone https://github.com/mileszs/ack.vim
 git clone https://github.com/vim-scripts/buftabs
 git clone https://github.com/junegunn/fzf.vim
 git clone https://github.com/vim-scripts/netrw.vim
-git clone https://github.com/rust-lang/rust.vim
-git clone https://github.com/racer-rust/vim-racer
 git clone https://github.com/ervandew/supertab
 git clone https://github.com/mkitt/tabline.vim
-git clone https://github.com/vim-scripts/taglist.vim
+# need ctags
+# git clone https://github.com/vim-scripts/taglist.vim
 git clone https://github.com/prettier/vim-prettier
 git clone https://github.com/christoomey/vim-tmux-navigator
 

@@ -418,16 +418,16 @@ nnoremap <leader>v :Vexplore<CR>
 """""""""""""""""""""""""""""""
 " [plugin] taglist
 """""""""""""""""""""""""""""""
-filetype on
-nnoremap <leader>tt :TlistToggle<CR>
-
-
-" change search highlight color
-highlight Search ctermbg=LightBlue
-highlight Search ctermfg=black
-
-autocmd BufNewFile,BufRead *.cu set filetype=cpp
-autocmd BufNewFile,BufRead *.tpp set filetype=cpp
+"filetype on
+"nnoremap <leader>tt :TlistToggle<CR>
+"
+"
+"" change search highlight color
+"highlight Search ctermbg=LightBlue
+"highlight Search ctermfg=black
+"
+"autocmd BufNewFile,BufRead *.cu set filetype=cpp
+"autocmd BufNewFile,BufRead *.tpp set filetype=cpp
 
 """""""""""""""""""""""""""""""
 " [plugin] Golang
