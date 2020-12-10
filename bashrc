@@ -1,8 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+parse_git_branch() {
+git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
 Cool="\342\236\244\040"
-PS1="\[\e[0;36m\]\u\[\e[m\]@\[\e[0;33m\]\w\[\e[m\](\$(git branch 2>/dev/null | grep '^*' | colrm 1 2))\n\[\e[0;36m\]$Cool\[\e[m\]"
+PS1="\[\e[0;36m\]\u\[\e[m\]@\[\e[0;33m\]\w\[\e[m\]\$(parse_git_branch)\n\[\e[0;36m\]$Cool\[\e[m\]"
 
 HISTSIZE=10000
 HISTFILESIZE=10000
@@ -31,4 +35,5 @@ export FZF_DEFAULT_OPS="--extended"
 #alias ls='ls -G'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-source ~/deeper_bashrc
+source ~/.deeper_bashrc
+
