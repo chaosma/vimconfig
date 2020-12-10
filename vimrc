@@ -130,7 +130,7 @@ set tm=500
 " Enable syntax highlighting
 syntax enable 
 
-highlight Normal guibg=none guifg=none
+" highlight Normal guibg=none guifg=none
 "try
 "    colorscheme desert
 "catch
