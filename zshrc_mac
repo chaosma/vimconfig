@@ -15,7 +15,7 @@ precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '(%b)'
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
-PROMPT='%B%F{115}%~@%m%f%b%F{111} ${vcs_info_msg_0_}%f'$'\n''🤔 '
+PROMPT='%B%F{39}%n@%m%f:%F{83}%~%f%b%F{111} ${vcs_info_msg_0_}%f'$'\n''🤔 '
 
 HISTSIZE=10000
 HISTFILESIZE=10000
