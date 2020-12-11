@@ -3,7 +3,7 @@ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
 Cool="\342\236\244\040"
-PS1="\[\e[0;36m\]\u\[\e[m\]@\[\e[0;36m\]\h\[\e[m\]:\[\e[0;33m\]\w\[\e[m\]\$(parse_git_branch)\n\[\e[0;36m\]$Cool\[\e[m\]"
+PS1="\[\e[1;34m\]\u@\h\[\e[m\]:\[\e[0;33m\]\w\[\e[m\] \$(parse_git_branch)\n\[\e[0;36m\]$Cool\[\e[m\]"
 
 HISTSIZE=10000
 HISTFILESIZE=10000
