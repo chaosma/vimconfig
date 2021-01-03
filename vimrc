@@ -538,6 +538,7 @@ let g:fzf_tags_command = 'ctags -R'
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
 nnoremap <Leader>a :Ag<CR>
+nnoremap <Leader>r :Rg<CR>
 nnoremap <Leader>f :Files<CR>
 
 
