@@ -24,6 +24,7 @@ git clone https://github.com/mkitt/tabline.vim
 # git clone https://github.com/vim-scripts/taglist.vim
 git clone https://github.com/prettier/vim-prettier
 git clone https://github.com/christoomey/vim-tmux-navigator
+git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim
 
 # install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
